@@ -2,10 +2,10 @@ package com.monkey.fruits.routers.main;
 
 import com.monkey.fruits.routers.base.BaseRouter;
 import com.monkey.fruits.ui.activities.MainActivity;
+import com.monkey.fruits.ui.fragments.endGame.view.EndGameFragment;
 import com.monkey.fruits.ui.fragments.logo.view.StartFragment;
 import com.monkey.fruits.ui.fragments.monkeyFruits.view.MonkeyFruitsFragment;
 import com.monkey.fruits.R;
-import com.monkey.fruits.ui.fragments.win.view.WinFragment;
 
 import javax.inject.Inject;
 
@@ -25,8 +25,8 @@ public class MainActivityRouterImpl extends BaseRouter<MainActivity> implements 
 
     @Override
     public void showWinFragment() {
-        if(!isCurrentFragment(R.id.fragment_container, WinFragment.class)) {
-            replaceFragment(R.id.fragment_container, new WinFragment());
+        if(!isCurrentFragment(R.id.fragment_container, EndGameFragment.class)) {
+            replaceFragment(R.id.fragment_container, new EndGameFragment());
         }
     }
 

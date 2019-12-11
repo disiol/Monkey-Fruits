@@ -9,13 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 
-import com.find.fruits.R;
-import com.find.fruits.databinding.FragmentGameBinding;
-import com.find.maces.routers.main.MainActivityRouter;
-import com.find.maces.ui.base.BaseBindingFragment;
-import com.find.maces.ui.fragments.game.presenter.GamePresenter;
+import com.monkey.fruits.R;
+import com.monkey.fruits.databinding.FragmentMonkeyFruitsBinding;
+import com.monkey.fruits.routers.main.MainActivityRouter;
+import com.monkey.fruits.ui.base.BaseBindingFragment;
+import com.monkey.fruits.ui.fragments.monkeyFruits.presenter.MonkeyFruitsPresenter;
 
-public class MonkeyFruitsFragment extends BaseBindingFragment<GamePresenter, FragmentGameBinding> implements GameView {
+
+public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresenter, FragmentMonkeyFruitsBinding> implements MonkeyFruitsView {
 
 
     private final Button[] buttonPres = new Button[1];
@@ -23,7 +24,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<GamePresenter, Fra
 
     @Override
     public int getLayoutResId() {
-        return R.layout.fragment_game;
+        return R.layout.fragment_monkey_fruits;
     }
 
 
@@ -160,13 +161,14 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<GamePresenter, Fra
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setMessage(message)
-                .setIcon(R.drawable.web_hi_res_512)
                 .setCancelable(false)
                 .setNegativeButton("ОК",
                         (dialog, id) -> dialog.cancel());
         AlertDialog alert = builder.create();
         alert.show();
     }
+
+
 
     @Override
     public void showError(Throwable throwable, MainActivityRouter mainActivityRouter) {

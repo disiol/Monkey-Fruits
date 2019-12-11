@@ -16,7 +16,7 @@
             mankeyFruits:layout_constraintEnd_toEndOf="parent"
             mankeyFruits:layout_constraintStart_toStartOf="parent"
             mankeyFruits:layout_constraintTop_toTopOf="parent"
-            mankeyFruits:srcCompat="@drawable/backgroundWin" />
+            mankeyFruits:srcCompat="@drawable/background_win" />
 
         <TextView
             android:id="@+id/textView"

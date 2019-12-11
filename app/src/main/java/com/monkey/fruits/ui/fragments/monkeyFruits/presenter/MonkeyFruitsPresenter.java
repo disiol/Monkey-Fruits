@@ -5,13 +5,13 @@ import android.util.Log;
 
 
 import com.monkey.fruits.ui.base.BasePresenter;
-import com.monkey.fruits.ui.fragments.monkeyFruits.view.GameView;
+import com.monkey.fruits.ui.fragments.monkeyFruits.view.MonkeyFruitsView;
 
 import javax.inject.Inject;
 
 import static com.monkey.fruits.constants.Constants.MYLOG_TEG;
 
-public class MonkeyFruitsPresenter extends BasePresenter<GameView> {
+public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
     private int caynterMatches;
     private int namber;
 

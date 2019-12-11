@@ -4,9 +4,9 @@ import com.monkey.fruits.di.scopes.ActivityScope;
 import com.monkey.fruits.di.scopes.FragmentScope;
 import com.monkey.fruits.routers.main.MainActivityRouter;
 import com.monkey.fruits.routers.main.MainActivityRouterImpl;
+import com.monkey.fruits.ui.fragments.endGame.view.EndGameFragment;
 import com.monkey.fruits.ui.fragments.logo.view.StartFragment;
 import com.monkey.fruits.ui.fragments.monkeyFruits.view.MonkeyFruitsFragment;
-import com.monkey.fruits.ui.fragments.win.view.WinFragment;
 
 import dagger.Binds;
 import dagger.Module;
@@ -30,6 +30,6 @@ public interface MainActivityModule {
 
     @FragmentScope
     @ContributesAndroidInjector
-    WinFragment winFragment();
+    EndGameFragment winFragment();
 
 }
