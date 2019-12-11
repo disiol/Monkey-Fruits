@@ -33,7 +33,7 @@ public class EndGameFragment extends BaseBindingFragment<endGamePresenter, Fragm
 
         if(!winGame){
             binding.textView.setText("GAME OVER");
-            binding.imageView20.setImageDrawable(getActivity().getDrawable(R.drawable.background_lose));
+            binding.ConstraintLayout.setBackground(getActivity().getDrawable(R.drawable.background_lose));
         }
 
         binding.buttonNewGame.setOnClickListener(v -> {

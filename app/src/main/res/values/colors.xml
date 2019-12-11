@@ -5,4 +5,5 @@
     <color name="colorAccent">#FE248D</color>
     <color name="background_color">#FFC0CB</color>
     <color name="bleak_color">#0A0A0A</color>
+    <color name="onColor">#00FFFFFF</color>
 </resources>
