@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">Win Puzzles</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Monkey Fruits</string>
 
-    <string name="facebook_app_id">487676158551311</string>
     <string name="you_win">You Win</string>
 </resources>
