@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mankeyFruits="http://schemas.android.com/apk/res-auto">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/rockletter_simple"
+        mankeyFruits:fontStyle="normal"
+        mankeyFruits:fontWeight="400"
+        mankeyFruits:font="@font/rockletter_simple"
+
+        />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="100"
+        android:font="@font/rockletter_simple"
+        mankeyFruits:fontStyle="normal"
+        mankeyFruits:fontWeight="100"
+        mankeyFruits:font="@font/rockletter_transparent"
+        />
+
+</font-family>

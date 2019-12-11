@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mankeyFruits="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/begraund">
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            mankeyFruits:layout_constraintBottom_toBottomOf="parent"
+            mankeyFruits:layout_constraintEnd_toEndOf="parent"
+            mankeyFruits:layout_constraintStart_toStartOf="parent"
+            mankeyFruits:layout_constraintTop_toTopOf="parent"
+            mankeyFruits:srcCompat="@drawable/win_image" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rockletter_simple"
+            android:gravity="center"
+            android:text="@string/you_win"
+            android:textAllCaps="true"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="65dp"
+            android:textStyle="bold"
+            mankeyFruits:layout_constraintBottom_toTopOf="@+id/imageView20"
+            mankeyFruits:layout_constraintEnd_toEndOf="parent"
+            mankeyFruits:layout_constraintStart_toStartOf="parent"
+            mankeyFruits:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="409dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal"
+            mankeyFruits:layout_constraintBottom_toBottomOf="parent"
+            mankeyFruits:layout_constraintEnd_toEndOf="parent"
+            mankeyFruits:layout_constraintStart_toStartOf="parent"
+            mankeyFruits:layout_constraintTop_toBottomOf="@+id/imageView20">
+
+            <Button
+                android:id="@+id/button_new_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/rockletter_simple"
+                android:text="New game"
+                android:textAllCaps="true"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/rockletter_simple"
+                android:text="exit"
+                android:textAllCaps="true"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
