@@ -176,4 +176,9 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
     }
 
 
+    @Override
+    public void showEndGame(MainActivityRouter mainActivityRouter, boolean flag) {
+
+        mainActivityRouter.showWinFragment(flag);
+    }
 }

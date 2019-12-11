@@ -15,6 +15,7 @@ import com.monkey.fruits.ui.fragments.endGame.presenter.endGamePresenter;
 
 public class EndGameFragment extends BaseBindingFragment<endGamePresenter, FragmentEndGameBinding> implements EndGameView {
 
+    public static final String WIN = "win";
 
     private boolean winGame;
 
@@ -28,9 +29,11 @@ public class EndGameFragment extends BaseBindingFragment<endGamePresenter, Fragm
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        winGame= getArguments().getBoolean(WIN);
 
         if(!winGame){
             binding.textView.setText("GAME OVER");
+            binding.imageView20.setImageDrawable(getActivity().getDrawable(R.drawable.background_lose));
         }
 
         binding.buttonNewGame.setOnClickListener(v -> {

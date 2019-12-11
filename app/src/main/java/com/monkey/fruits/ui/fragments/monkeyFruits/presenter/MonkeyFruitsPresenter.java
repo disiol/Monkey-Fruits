@@ -4,6 +4,7 @@ package com.monkey.fruits.ui.fragments.monkeyFruits.presenter;
 import android.util.Log;
 
 
+import com.monkey.fruits.routers.main.MainActivityRouter;
 import com.monkey.fruits.ui.base.BasePresenter;
 import com.monkey.fruits.ui.fragments.monkeyFruits.view.MonkeyFruitsView;
 
@@ -14,9 +15,11 @@ import static com.monkey.fruits.constants.Constants.MYLOG_TEG;
 public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
     private int caynterMatches;
     private int namber;
+    private MainActivityRouter mainActivityRouter;
 
     @Inject
-    MonkeyFruitsPresenter() {
+    MonkeyFruitsPresenter(MainActivityRouter mainActivityRouter) {
+        this.mainActivityRouter = mainActivityRouter;
     }
 
     public void chakForMathes(boolean mathes) {
@@ -28,11 +31,13 @@ public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
 
         if (!mathes) {
             getView().showMessage("Upss");
+            getView().showEndGame(mainActivityRouter, false);
+
             Log.d(MYLOG_TEG, "Upss " + caynterMatches);
         }
 
         if (caynterMatches == 5) {
-            getView().showMessage("You Win");
+            getView().showEndGame(mainActivityRouter, true);
         }
     }
 

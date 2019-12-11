@@ -1,5 +1,7 @@
 package com.monkey.fruits.routers.main;
 
+import android.os.Bundle;
+
 import com.monkey.fruits.routers.base.BaseRouter;
 import com.monkey.fruits.ui.activities.MainActivity;
 import com.monkey.fruits.ui.fragments.endGame.view.EndGameFragment;
@@ -9,7 +11,10 @@ import com.monkey.fruits.R;
 
 import javax.inject.Inject;
 
+import static com.monkey.fruits.ui.fragments.endGame.view.EndGameFragment.WIN;
+
 public class MainActivityRouterImpl extends BaseRouter<MainActivity> implements MainActivityRouter {
+
 
     @Inject
     MainActivityRouterImpl(MainActivity activity) {
@@ -24,9 +29,14 @@ public class MainActivityRouterImpl extends BaseRouter<MainActivity> implements 
     }
 
     @Override
-    public void showWinFragment() {
+    public void showWinFragment(boolean flag) {
         if(!isCurrentFragment(R.id.fragment_container, EndGameFragment.class)) {
-            replaceFragment(R.id.fragment_container, new EndGameFragment());
+            Bundle fragmentBundle = new Bundle();
+            fragmentBundle.putBoolean(WIN,  flag);
+
+            EndGameFragment fragment = new EndGameFragment();
+            fragment.setArguments(fragmentBundle);
+            replaceFragment(R.id.fragment_container, fragment);
         }
     }
 
