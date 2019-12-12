@@ -32,24 +32,28 @@
                 app:srcCompat="@drawable/mantch_3"
                 android:text="3" />
 
-            <Button
+            <ImageView
                 android:id="@+id/button4"
-                android:text="4" />
+                app:srcCompat="@drawable/mantch_4"
+                />
 
-            <Button
+            <ImageView
                 android:id="@+id/button5"
-                android:text="5" />
+                app:srcCompat="@drawable/mantch_5"
+               />
 
-            <Button
+            <ImageView
                 android:id="@+id/button6"
 
                 android:layout_weight="1"
-                android:text="5" />
+                app:srcCompat="@drawable/mantch_5"
+                />
 
-            <Button
+            <ImageView
                 android:id="@+id/button7"
                 android:layout_weight="1"
-                android:text="4" />
+                app:srcCompat="@drawable/mantch_4"
+                />
 
             <ImageView
                 android:id="@+id/button8"
