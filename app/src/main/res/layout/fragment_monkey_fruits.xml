@@ -141,22 +141,22 @@
                 tools:srcCompat="@drawable/mantch_7" />
 
             <ImageView
-                android:id="@+id/button10"
-                android:layout_weight="1"
-                android:clickable="true"
-                tools:srcCompat="@drawable/mantch_1" />
+                android:id="@+id/button18"
+                android:layout_width="106dp"
+                android:layout_height="90dp"                android:clickable="true"
+                tools:srcCompat="@drawable/mantch_8" />
 
             <ImageView
-                android:id="@+id/button10"
-                android:layout_weight="1"
-                android:clickable="true"
-                tools:srcCompat="@drawable/mantch_1" />
+                android:id="@+id/button19"
+                android:layout_width="78dp"
+                android:layout_height="95dp"                android:clickable="true"
+                tools:srcCompat="@drawable/mantch_9" />
 
             <ImageView
-                android:id="@+id/button10"
-                android:layout_weight="1"
-                android:clickable="true"
-                tools:srcCompat="@drawable/mantch_1" />
+                android:id="@+id/button20"
+                android:layout_width="78dp"
+                android:layout_height="95dp"                android:clickable="true"
+                tools:srcCompat="@drawable/mantch_10" />
 
 
         </androidx.gridlayout.widget.GridLayout>
