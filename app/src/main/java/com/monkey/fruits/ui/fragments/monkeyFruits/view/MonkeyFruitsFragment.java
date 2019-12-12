@@ -20,7 +20,7 @@ import com.monkey.fruits.ui.fragments.monkeyFruits.presenter.MonkeyFruitsPresent
 public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresenter, FragmentMonkeyFruitsBinding> implements MonkeyFruitsView {
 
 
-    private final Button[] buttonPres = new Button[1];
+    private final ImageView[] buttonPres = new ImageView[1];
 
 
     @Override
@@ -51,8 +51,8 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
         ImageView button16 = getActivity().findViewById(R.id.button16);
         ImageView button17 = getActivity().findViewById(R.id.button17);
         ImageView button18 = getActivity().findViewById(R.id.button18);
-        ImageView button19= getActivity().findViewById(R.id.button19);
-        ImageView button20= getActivity().findViewById(R.id.button20);
+        ImageView button19 = getActivity().findViewById(R.id.button19);
+        ImageView button20 = getActivity().findViewById(R.id.button20);
 
 
         button1.setOnClickListener(v -> {
@@ -112,17 +112,72 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
             doAfterClick(buttonNmberForMatch, button9, buttonPres);
 
         });
-        button10.setOnClickListener(v -> {
-            int buttonNmberForMatch = 1;
+        button11.setOnClickListener(v -> {
+            int buttonNmberForMatch = 6;
 
-            doAfterClick(buttonNmberForMatch, button10, buttonPres);
+            doAfterClick(buttonNmberForMatch, button11, buttonPres);
+
+        });
+        button12.setOnClickListener(v -> {
+            int buttonNmberForMatch = 7;
+
+            doAfterClick(buttonNmberForMatch, button12, buttonPres);
+
+        });
+        button13.setOnClickListener(v -> {
+            int buttonNmberForMatch = 8;
+
+            doAfterClick(buttonNmberForMatch, button13, buttonPres);
+
+        });
+        button14.setOnClickListener(v -> {
+            int buttonNmberForMatch = 9;
+
+            doAfterClick(buttonNmberForMatch, button14, buttonPres);
+
+        });
+        button15.setOnClickListener(v -> {
+            int buttonNmberForMatch = 10;
+
+            doAfterClick(buttonNmberForMatch, button15, buttonPres);
+
+        });
+        button16.setOnClickListener(v -> {
+            int buttonNmberForMatch = 6;
+
+            doAfterClick(buttonNmberForMatch, button16, buttonPres);
+
+        });
+        button17.setOnClickListener(v -> {
+            int buttonNmberForMatch = 7;
+
+            doAfterClick(buttonNmberForMatch, button17, buttonPres);
+
+        });
+        button18.setOnClickListener(v -> {
+            int buttonNmberForMatch = 8;
+
+            doAfterClick(buttonNmberForMatch, button18, buttonPres);
+
+        });
+        button19.setOnClickListener(v -> {
+            int buttonNmberForMatch = 9;
+
+            doAfterClick(buttonNmberForMatch, button19, buttonPres);
+
+        });
+        button20.setOnClickListener(v -> {
+            int buttonNmberForMatch = 10;
+
+            doAfterClick(buttonNmberForMatch, button20, buttonPres);
 
         });
 
 
+
     }
 
-    private void doAfterClick(int buttonNmberForMatch, ImageView buttonClick, Button[] safeButtonPres) {
+    private void doAfterClick(int buttonNmberForMatch, ImageView buttonClick, ImageView[] safeButtonPres) {
         buttonClick.setClickable(false);
         cheakForNull(buttonClick);
 
@@ -130,20 +185,20 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
 
     }
 
-    protected void cheakForNull(Button buttonClick) {
+    protected void cheakForNull(ImageView buttonClick) {
         if (buttonPres[0] == null) {
             buttonPres[0] = buttonClick;
         }
     }
 
-    private void cheak(int buttonNmberForMatch, Button buttonLastClic, Button safeButtonPres) {
+    private void cheak(int buttonNmberForMatch, ImageView buttonLastClic, ImageView safeButtonPres) {
 
         if (presenter.getNamber() != 0) {
             if (presenter.getNamber() == buttonNmberForMatch) {
                 presenter.setNaber(0);
 
 
-                this.buttonPres[0].setVisibility(View.GONE);
+                safeButtonPres.setVisibility(View.GONE);
                 this.buttonPres[0] = null;
 
                 buttonLastClic.setVisibility(View.GONE);
@@ -151,7 +206,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
                 presenter.chakForMathes(true);
             } else if (presenter.getNamber() != buttonNmberForMatch && presenter.getNamber() != 0) {
 
-                this.buttonPres[0].setClickable(true);
+                safeButtonPres.setClickable(true);
                 buttonLastClic.setClickable(true);
 
                 this.buttonPres[0] = buttonLastClic;
@@ -178,7 +233,6 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
         AlertDialog alert = builder.create();
         alert.show();
     }
-
 
 
     @Override

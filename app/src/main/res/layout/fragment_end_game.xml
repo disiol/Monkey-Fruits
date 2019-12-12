@@ -29,9 +29,7 @@
         <LinearLayout
             android:layout_width="409dp"
             android:layout_height="106dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginBottom="1dp"
+            android:layout_margin="10dp"
             android:orientation="horizontal"
             mankeyFruits:layout_constraintBottom_toBottomOf="parent"
             mankeyFruits:layout_constraintEnd_toEndOf="parent"

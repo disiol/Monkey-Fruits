@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
+            android:layout_marginTop="32dp"
             android:foregroundGravity="center"
             app:columnCount="4"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -143,20 +144,51 @@
             <ImageView
                 android:id="@+id/button18"
                 android:layout_width="106dp"
-                android:layout_height="90dp"                android:clickable="true"
+                android:layout_height="90dp"
+                android:clickable="true"
                 tools:srcCompat="@drawable/mantch_8" />
 
             <ImageView
                 android:id="@+id/button19"
                 android:layout_width="78dp"
-                android:layout_height="95dp"                android:clickable="true"
+                android:layout_height="95dp"
+                android:clickable="true"
                 tools:srcCompat="@drawable/mantch_9" />
 
             <ImageView
                 android:id="@+id/button20"
                 android:layout_width="78dp"
-                android:layout_height="95dp"                android:clickable="true"
+                android:layout_height="95dp"
+                android:clickable="true"
                 tools:srcCompat="@drawable/mantch_10" />
+
+            <ImageView
+                android:id="@+id/button21"
+                android:layout_width="78dp"
+                android:layout_height="95dp"
+                android:clickable="true"
+                tools:srcCompat="@drawable/mantch_11" />
+
+            <ImageView
+                android:id="@+id/button22"
+                android:layout_width="78dp"
+                android:layout_height="95dp"
+                android:clickable="true"
+                tools:srcCompat="@drawable/mantch_12" />
+
+            <ImageView
+                android:id="@+id/button23"
+                android:layout_width="78dp"
+                android:layout_height="95dp"
+                android:clickable="true"
+                tools:srcCompat="@drawable/mantch_11" />
+
+            <ImageView
+                android:id="@+id/button24"
+                android:layout_width="78dp"
+                android:layout_height="95dp"
+                android:clickable="true"
+                tools:srcCompat="@drawable/mantch_12" />
 
 
         </androidx.gridlayout.widget.GridLayout>
