@@ -53,6 +53,10 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
         ImageView button18 = getActivity().findViewById(R.id.button18);
         ImageView button19 = getActivity().findViewById(R.id.button19);
         ImageView button20 = getActivity().findViewById(R.id.button20);
+        ImageView button21 = getActivity().findViewById(R.id.button21);
+        ImageView button22 = getActivity().findViewById(R.id.button22);
+        ImageView button23 = getActivity().findViewById(R.id.button23);
+        ImageView button24 = getActivity().findViewById(R.id.button24);
 
 
         button1.setOnClickListener(v -> {
@@ -172,7 +176,30 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
             doAfterClick(buttonNmberForMatch, button20, buttonPres);
 
         });
+        button21.setOnClickListener(v -> {
+            int buttonNmberForMatch = 11;
 
+            doAfterClick(buttonNmberForMatch, button21, buttonPres);
+
+        });
+        button22.setOnClickListener(v -> {
+            int buttonNmberForMatch = 12;
+
+            doAfterClick(buttonNmberForMatch, button22, buttonPres);
+
+        });
+        button21.setOnClickListener(v -> {
+            int buttonNmberForMatch = 11;
+
+            doAfterClick(buttonNmberForMatch, button21, buttonPres);
+
+        });
+        button22.setOnClickListener(v -> {
+            int buttonNmberForMatch = 12;
+
+            doAfterClick(buttonNmberForMatch, button22, buttonPres);
+
+        });
 
 
     }
