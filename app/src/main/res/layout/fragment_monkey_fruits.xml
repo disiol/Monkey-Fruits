@@ -30,7 +30,6 @@
             <ImageView
                 android:id="@+id/button2"
                 android:clickable="true"
-                android:text="2"
                 app:srcCompat="@drawable/mantch_2" />
 
             <ImageView
@@ -38,7 +37,6 @@
                 android:layout_width="75dp"
                 android:layout_height="127dp"
                 android:clickable="true"
-                android:text="3"
                 app:srcCompat="@drawable/mantch_3" />
 
             <ImageView
