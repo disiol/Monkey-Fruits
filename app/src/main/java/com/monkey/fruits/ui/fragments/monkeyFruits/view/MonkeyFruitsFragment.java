@@ -93,7 +93,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
 
         });
         button6.setOnClickListener(v -> {
-            int buttonNmberForMatch = 5;
+            int buttonNmberForMatch =6;
 
             doAfterClick(buttonNmberForMatch, button6, buttonPres);
 
@@ -114,6 +114,12 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
             int buttonNmberForMatch = 2;
 
             doAfterClick(buttonNmberForMatch, button9, buttonPres);
+
+        });
+        button10.setOnClickListener(v -> {
+            int buttonNmberForMatch = 1;
+
+            doAfterClick(buttonNmberForMatch, button10, buttonPres);
 
         });
         button11.setOnClickListener(v -> {
@@ -188,16 +194,17 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
             doAfterClick(buttonNmberForMatch, button22, buttonPres);
 
         });
-        button21.setOnClickListener(v -> {
+
+        button23.setOnClickListener(v -> {
             int buttonNmberForMatch = 11;
 
-            doAfterClick(buttonNmberForMatch, button21, buttonPres);
+            doAfterClick(buttonNmberForMatch, button23, buttonPres);
 
         });
-        button22.setOnClickListener(v -> {
+        button24.setOnClickListener(v -> {
             int buttonNmberForMatch = 12;
 
-            doAfterClick(buttonNmberForMatch, button22, buttonPres);
+            doAfterClick(buttonNmberForMatch, button24, buttonPres);
 
         });
 

@@ -77,7 +77,6 @@
                 android:id="@+id/button9"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:text="2"
                 app:srcCompat="@drawable/mantch_2" />
 
             <ImageView
