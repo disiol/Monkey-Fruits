@@ -13,6 +13,7 @@ import javax.inject.Inject;
 import static com.monkey.fruits.constants.Constants.MYLOG_TEG;
 
 public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
+    public static final int ForMatches = 5;
     private int caynterMatches;
     private int namber;
     private MainActivityRouter mainActivityRouter;
@@ -36,7 +37,7 @@ public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
             Log.d(MYLOG_TEG, "Upss " + caynterMatches);
         }
 
-        if (caynterMatches == 5) {
+        if (caynterMatches == ForMatches) {
             getView().showEndGame(mainActivityRouter, true);
         }
     }
