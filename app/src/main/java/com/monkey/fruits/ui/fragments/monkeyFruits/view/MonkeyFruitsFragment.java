@@ -244,7 +244,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
                 safeButtonPres.setClickable(true);
                 buttonLastClic.setClickable(true);
 
-                this.buttonPres[0] = buttonLastClic;
+                this.buttonPres[0] = null;
 
                 presenter.setNaber(0);
 
