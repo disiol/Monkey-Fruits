@@ -4,6 +4,7 @@ package com.monkey.fruits.ui.fragments.monkeyFruits.view;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,16 +33,26 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button button1 = getActivity().findViewById(R.id.button1);
-        Button button2 = getActivity().findViewById(R.id.button2);
-        Button button3 = getActivity().findViewById(R.id.button3);
-        Button button4 = getActivity().findViewById(R.id.button4);
-        Button button5 = getActivity().findViewById(R.id.button5);
-        Button button7 = getActivity().findViewById(R.id.button7);
-        Button button6 = getActivity().findViewById(R.id.button6);
-        Button button8 = getActivity().findViewById(R.id.button8);
-        Button button9 = getActivity().findViewById(R.id.button9);
-        Button button10 = getActivity().findViewById(R.id.button10);
+        ImageView button1 = getActivity().findViewById(R.id.button1);
+        ImageView button2 = getActivity().findViewById(R.id.button2);
+        ImageView button3 = getActivity().findViewById(R.id.button3);
+        ImageView button4 = getActivity().findViewById(R.id.button4);
+        ImageView button5 = getActivity().findViewById(R.id.button5);
+        ImageView button7 = getActivity().findViewById(R.id.button7);
+        ImageView button6 = getActivity().findViewById(R.id.button6);
+        ImageView button8 = getActivity().findViewById(R.id.button8);
+        ImageView button9 = getActivity().findViewById(R.id.button9);
+        ImageView button10 = getActivity().findViewById(R.id.button10);
+        ImageView button11 = getActivity().findViewById(R.id.button11);
+        ImageView button12 = getActivity().findViewById(R.id.button12);
+        ImageView button13 = getActivity().findViewById(R.id.button13);
+        ImageView button14 = getActivity().findViewById(R.id.button14);
+        ImageView button15 = getActivity().findViewById(R.id.button15);
+        ImageView button16 = getActivity().findViewById(R.id.button16);
+        ImageView button17 = getActivity().findViewById(R.id.button17);
+        ImageView button18 = getActivity().findViewById(R.id.button18);
+        ImageView button19= getActivity().findViewById(R.id.button19);
+        ImageView button20= getActivity().findViewById(R.id.button20);
 
 
         button1.setOnClickListener(v -> {
@@ -111,7 +122,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
 
     }
 
-    private void doAfterClick(int buttonNmberForMatch, Button buttonClick, Button[] safeButtonPres) {
+    private void doAfterClick(int buttonNmberForMatch, ImageView buttonClick, Button[] safeButtonPres) {
         buttonClick.setClickable(false);
         cheakForNull(buttonClick);
 
