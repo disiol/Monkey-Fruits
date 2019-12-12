@@ -38,10 +38,11 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
         ImageView button3 = getActivity().findViewById(R.id.button3);
         ImageView button4 = getActivity().findViewById(R.id.button4);
         ImageView button5 = getActivity().findViewById(R.id.button5);
-        ImageView button7 = getActivity().findViewById(R.id.button7);
         ImageView button6 = getActivity().findViewById(R.id.button6);
+        ImageView button7 = getActivity().findViewById(R.id.button7);
         ImageView button8 = getActivity().findViewById(R.id.button8);
         ImageView button9 = getActivity().findViewById(R.id.button9);
+
         ImageView button10 = getActivity().findViewById(R.id.button10);
         ImageView button11 = getActivity().findViewById(R.id.button11);
         ImageView button12 = getActivity().findViewById(R.id.button12);
@@ -93,7 +94,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
 
         });
         button6.setOnClickListener(v -> {
-            int buttonNmberForMatch =6;
+            int buttonNmberForMatch = 5;
 
             doAfterClick(buttonNmberForMatch, button6, buttonPres);
 
