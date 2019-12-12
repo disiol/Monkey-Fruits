@@ -67,7 +67,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
         button1.setOnClickListener(v -> {
             int buttonNmberForMatch = 1;
 
-            doAfterClick(buttonNmberForMatch, button1, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button1, buttonPres, view, R.drawable.mantch_1);
 
 
         });
@@ -75,148 +75,149 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
         button2.setOnClickListener(v -> {
             int buttonNmberForMatch = 2;
 
-            doAfterClick(buttonNmberForMatch, button2, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button2, buttonPres, view, R.drawable.mantch_2);
 
         });
 
         button3.setOnClickListener(v -> {
             int buttonNmberForMatch = 3;
 
-            doAfterClick(buttonNmberForMatch, button3, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button3, buttonPres, view, R.drawable.mantch_3);
 
         });
         button4.setOnClickListener(v -> {
             int buttonNmberForMatch = 4;
 
-            doAfterClick(buttonNmberForMatch, button4, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button4, buttonPres, view, R.drawable.mantch_4);
 
         });
         button5.setOnClickListener(v -> {
             int buttonNmberForMatch = 5;
 
-            doAfterClick(buttonNmberForMatch, button5, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button5, buttonPres, view, R.drawable.mantch_5);
 
         });
         button6.setOnClickListener(v -> {
             int buttonNmberForMatch = 5;
 
-            doAfterClick(buttonNmberForMatch, button6, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button6, buttonPres, view, R.drawable.mantch_5);
 
         });
         button7.setOnClickListener(v -> {
             int buttonNmberForMatch = 4;
 
-            doAfterClick(buttonNmberForMatch, button7, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button7, buttonPres, view, R.drawable.mantch_4);
 
         });
         button8.setOnClickListener(v -> {
             int buttonNmberForMatch = 3;
 
-            doAfterClick(buttonNmberForMatch, button8, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button8, buttonPres, view, R.drawable.mantch_3);
 
         });
         button9.setOnClickListener(v -> {
             int buttonNmberForMatch = 2;
 
-            doAfterClick(buttonNmberForMatch, button9, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button9, buttonPres, view, R.drawable.mantch_2);
 
         });
         button10.setOnClickListener(v -> {
             int buttonNmberForMatch = 1;
 
-            doAfterClick(buttonNmberForMatch, button10, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button10, buttonPres, view, R.drawable.mantch_1);
 
         });
         button11.setOnClickListener(v -> {
             int buttonNmberForMatch = 6;
 
-            doAfterClick(buttonNmberForMatch, button11, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button11, buttonPres, view, R.drawable.mantch_6);
 
         });
         button12.setOnClickListener(v -> {
             int buttonNmberForMatch = 7;
 
-            doAfterClick(buttonNmberForMatch, button12, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button12, buttonPres, view, R.drawable.mantch_7);
 
         });
         button13.setOnClickListener(v -> {
             int buttonNmberForMatch = 8;
 
-            doAfterClick(buttonNmberForMatch, button13, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button13, buttonPres, view, R.drawable.mantch_8);
 
         });
         button14.setOnClickListener(v -> {
             int buttonNmberForMatch = 9;
 
-            doAfterClick(buttonNmberForMatch, button14, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button14, buttonPres, view, R.drawable.mantch_9);
 
         });
         button15.setOnClickListener(v -> {
             int buttonNmberForMatch = 10;
 
-            doAfterClick(buttonNmberForMatch, button15, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button15, buttonPres, view, R.drawable.mantch_10);
 
         });
         button16.setOnClickListener(v -> {
             int buttonNmberForMatch = 6;
 
-            doAfterClick(buttonNmberForMatch, button16, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button16, buttonPres, view, R.drawable.mantch_6);
 
         });
         button17.setOnClickListener(v -> {
             int buttonNmberForMatch = 7;
 
-            doAfterClick(buttonNmberForMatch, button17, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button17, buttonPres, view, R.drawable.mantch_7);
 
         });
         button18.setOnClickListener(v -> {
             int buttonNmberForMatch = 8;
 
-            doAfterClick(buttonNmberForMatch, button18, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button18, buttonPres, view, R.drawable.mantch_8);
 
         });
         button19.setOnClickListener(v -> {
             int buttonNmberForMatch = 9;
 
-            doAfterClick(buttonNmberForMatch, button19, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button19, buttonPres, view, R.drawable.mantch_9);
 
         });
         button20.setOnClickListener(v -> {
             int buttonNmberForMatch = 10;
 
-            doAfterClick(buttonNmberForMatch, button20, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button20, buttonPres, view, R.drawable.mantch_10);
 
         });
         button21.setOnClickListener(v -> {
             int buttonNmberForMatch = 11;
 
-            doAfterClick(buttonNmberForMatch, button21, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button21, buttonPres, view, R.drawable.mantch_11);
 
         });
         button22.setOnClickListener(v -> {
             int buttonNmberForMatch = 12;
 
-            doAfterClick(buttonNmberForMatch, button22, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button22, buttonPres, view, R.drawable.mantch_12);
 
         });
 
         button23.setOnClickListener(v -> {
             int buttonNmberForMatch = 11;
 
-            doAfterClick(buttonNmberForMatch, button23, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button23, buttonPres, view, R.drawable.mantch_11);
 
         });
         button24.setOnClickListener(v -> {
             int buttonNmberForMatch = 12;
 
-            doAfterClick(buttonNmberForMatch, button24, buttonPres, view);
+            doAfterClick(buttonNmberForMatch, button24, buttonPres, view, R.drawable.mantch_12);
 
         });
 
 
     }
 
-    private void doAfterClick(int buttonNmberForMatch, ImageView buttonClick, ImageView[] safeButtonPres, View v) {
+    private void doAfterClick(int buttonNmberForMatch, ImageView buttonClick, ImageView[] safeButtonPres, View v, int drable) {
+        buttonClick.setImageDrawable(getActivity().getDrawable(drable));
         buttonClick.startAnimation(animRotate);
         buttonClick.setClickable(false);
         cheakForNull(buttonClick);
