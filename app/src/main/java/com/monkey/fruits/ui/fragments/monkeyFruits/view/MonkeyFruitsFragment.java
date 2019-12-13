@@ -2,6 +2,7 @@ package com.monkey.fruits.ui.fragments.monkeyFruits.view;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -17,6 +18,8 @@ import com.monkey.fruits.routers.main.MainActivityRouter;
 import com.monkey.fruits.ui.base.BaseBindingFragment;
 import com.monkey.fruits.ui.fragments.monkeyFruits.presenter.MonkeyFruitsPresenter;
 import com.squareup.picasso.Picasso;
+
+import static com.monkey.fruits.constants.Constants.MYLOG_TEG;
 
 
 public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresenter, FragmentMonkeyFruitsBinding> implements MonkeyFruitsView {
@@ -218,12 +221,13 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
     }
 
     private void doAfterClick(int buttonNmberForMatch, ImageView buttonClick, ImageView[] safeButtonPres, View v, int drable) {
-        buttonClick.setImageDrawable(getActivity().getDrawable(drable));
+        loadImage(drable, buttonClick);
+
         buttonClick.startAnimation(animRotate);
         buttonClick.setClickable(false);
         cheakForNull(buttonClick);
 
-        cheak(buttonNmberForMatch, buttonClick, safeButtonPres[0]);
+        cheak(buttonNmberForMatch, buttonClick, safeButtonPres[0], drable);
 
     }
 
@@ -233,7 +237,8 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
         }
     }
 
-    private void cheak(int buttonNmberForMatch, ImageView buttonLastClic, ImageView safeButtonPres) {
+    private void cheak(int buttonNmberForMatch, ImageView buttonLastClic, ImageView safeButtonPres, int drable) {
+        int skirt = R.drawable.skirt;
 
         if (presenter.getNamber() != 0) {
             if (presenter.getNamber() == buttonNmberForMatch) {
@@ -251,11 +256,26 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
                 safeButtonPres.setClickable(true);
                 buttonLastClic.setClickable(true);
 
-                this.buttonPres[0] = null;
 
                 presenter.setNaber(0);
-                loadImage(R.drawable.skirt, safeButtonPres);
-                loadImage(R.drawable.skirt,buttonLastClic);
+               // loadImage(skirt, safeButtonPres);
+
+                boolean equals = safeButtonPres.equals(buttonLastClic);
+
+                Log.d(MYLOG_TEG, "equals " + equals);
+
+
+                if (!equals) {
+                    loadImage(skirt, safeButtonPres);
+                    //this.buttonPres[0] = buttonLastClic;
+                    this.buttonPres[0] = null;
+
+                } else if (equals) {
+                    loadImage(skirt, safeButtonPres);
+                }
+
+
+
                 presenter.chakForMathes(false);
             }
         } else if (presenter.getNamber() >= 0) {
