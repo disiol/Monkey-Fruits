@@ -16,6 +16,7 @@ import com.monkey.fruits.databinding.FragmentMonkeyFruitsBinding;
 import com.monkey.fruits.routers.main.MainActivityRouter;
 import com.monkey.fruits.ui.base.BaseBindingFragment;
 import com.monkey.fruits.ui.fragments.monkeyFruits.presenter.MonkeyFruitsPresenter;
+import com.squareup.picasso.Picasso;
 
 
 public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresenter, FragmentMonkeyFruitsBinding> implements MonkeyFruitsView {
@@ -253,7 +254,8 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
                 this.buttonPres[0] = null;
 
                 presenter.setNaber(0);
-
+                loadImage(R.drawable.skirt, safeButtonPres);
+                loadImage(R.drawable.skirt,buttonLastClic);
                 presenter.chakForMathes(false);
             }
         } else if (presenter.getNamber() >= 0) {
@@ -286,5 +288,9 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
     public void showEndGame(MainActivityRouter mainActivityRouter, boolean flag) {
 
         mainActivityRouter.showWinFragment(flag);
+    }
+
+    public void loadImage(int part, ImageView button) {
+        Picasso.get().load(part).into(button);
     }
 }
