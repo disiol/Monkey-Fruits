@@ -2,6 +2,7 @@ package com.monkey.fruits.ui.fragments.monkeyFruits.view;
 
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -28,6 +29,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
     private final ImageView[] buttonPres = new ImageView[1];
 
     private Animation animRotate = null;
+    private CountDownTimer countDownTimerConfirmationImageView;
 
 
     @Override
@@ -234,6 +236,8 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
     protected void cheakForNull(ImageView buttonClick) {
         if (buttonPres[0] == null) {
             buttonPres[0] = buttonClick;
+            Log.d(MYLOG_TEG, "cheakForNull =  " +   buttonPres[0]);
+
         }
     }
 
@@ -253,8 +257,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
                 presenter.chakForMathes(true);
             } else if (presenter.getNamber() != buttonNmberForMatch && presenter.getNamber() != 0) {
 
-                safeButtonPres.setClickable(true);
-                buttonLastClic.setClickable(true);
+
 
 
                 presenter.setNaber(0);
@@ -267,14 +270,27 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
 
                 if (!equals) {
                     loadImage(skirt, safeButtonPres);
-                    //this.buttonPres[0] = buttonLastClic;
                     this.buttonPres[0] = null;
+
+
+                    countDownTimerConfirmationImageView = new CountDownTimer(100, 1) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            loadImage(skirt, buttonLastClic);
+                        }
+                    }.start();
+
 
                 } else if (equals) {
                     loadImage(skirt, safeButtonPres);
                 }
 
-
+                safeButtonPres.setClickable(true);
+                buttonLastClic.setClickable(true);
 
                 presenter.chakForMathes(false);
             }
