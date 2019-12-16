@@ -28,10 +28,10 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
 
 
     private final ImageView[] buttonPres = new ImageView[1];
-
     private Animation animRotate = null;
+    private int lifes = 5;
+    private int points = 0;
     private CountDownTimer countDownTimerConfirmationImageView;
-
 
     @Override
     public int getLayoutResId() {
@@ -43,6 +43,9 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         animRotate = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate);
+
+        setLifesLeft(lifes);
+        setPoints(points);
 
         ImageView button1 = getActivity().findViewById(R.id.button1);
         ImageView button2 = getActivity().findViewById(R.id.button2);
