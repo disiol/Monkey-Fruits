@@ -24,16 +24,20 @@
             mankeyFruits:layout_constraintHorizontal_bias="0.0"
             mankeyFruits:layout_constraintStart_toStartOf="parent"
             mankeyFruits:layout_constraintTop_toTopOf="parent"
-            mankeyFruits:layout_constraintVertical_bias="0.663" />
+            mankeyFruits:layout_constraintVertical_bias="0.453" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="409dp"
             android:layout_height="106dp"
             android:layout_margin="10dp"
+            android:layout_marginStart="32dp"
             android:orientation="horizontal"
             mankeyFruits:layout_constraintBottom_toBottomOf="parent"
             mankeyFruits:layout_constraintEnd_toEndOf="parent"
-            mankeyFruits:layout_constraintStart_toStartOf="parent">
+            mankeyFruits:layout_constraintHorizontal_bias="0.42"
+            mankeyFruits:layout_constraintStart_toStartOf="parent"
+            mankeyFruits:layout_constraintTop_toTopOf="@+id/guideline3">
 
             <TextView
                 android:id="@+id/button_new_game"
@@ -69,7 +73,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            mankeyFruits:layout_constraintGuide_begin="555dp" />
+            mankeyFruits:layout_constraintGuide_begin="365dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            mankeyFruits:layout_constraintGuide_begin="404dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
