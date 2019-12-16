@@ -21,10 +21,10 @@
             android:textStyle="bold"
             mankeyFruits:layout_constraintBottom_toTopOf="@+id/guideline2"
             mankeyFruits:layout_constraintEnd_toEndOf="parent"
-            mankeyFruits:layout_constraintHorizontal_bias="0.0"
+            mankeyFruits:layout_constraintHorizontal_bias="1.0"
             mankeyFruits:layout_constraintStart_toStartOf="parent"
             mankeyFruits:layout_constraintTop_toTopOf="parent"
-            mankeyFruits:layout_constraintVertical_bias="0.453" />
+            mankeyFruits:layout_constraintVertical_bias="0.768" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -61,8 +61,6 @@
                 android:layout_weight="1"
                 android:background="@color/onColor"
                 android:fontFamily="@font/rockletter_simple"
-
-
                 android:text="exit"
                 android:textAllCaps="true"
                 android:textSize="30dp" />
@@ -73,14 +71,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            mankeyFruits:layout_constraintGuide_begin="365dp" />
+            mankeyFruits:layout_constraintGuide_begin="327dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            mankeyFruits:layout_constraintGuide_begin="404dp" />
+            mankeyFruits:layout_constraintGuide_begin="497dp" />
+
+        <TextView
+            android:id="@+id/poinints_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/rockletter_simple"
+            android:text="@string/points"
+            android:textAllCaps="true"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            mankeyFruits:layout_constraintBottom_toTopOf="@+id/guideline3"
+            mankeyFruits:layout_constraintEnd_toEndOf="parent"
+            mankeyFruits:layout_constraintStart_toStartOf="parent"
+            mankeyFruits:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
