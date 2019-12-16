@@ -34,10 +34,10 @@ public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
         if (!mathes) {
 
             if (lifes == 0) {
-//                getView().showEndGame(mainActivityRouter, false);
+                getView().showEndGame(mainActivityRouter, false);
             } else {
                 lifes--;
-             //   getView().showMessage("Liefs left : " + lifes);
+                getView().showMessage("Liefs left : " + lifes);
 
             }
 

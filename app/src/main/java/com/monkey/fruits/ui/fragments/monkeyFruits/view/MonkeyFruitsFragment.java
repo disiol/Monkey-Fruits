@@ -273,7 +273,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
                     this.buttonPres[0] = null;
 
 
-                    countDownTimerConfirmationImageView = new CountDownTimer(100, 1) {
+                    countDownTimerConfirmationImageView = new CountDownTimer(1500, 1) {
                         @Override
                         public void onTick(long millisUntilFinished) {
                         }
@@ -281,6 +281,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
                         @Override
                         public void onFinish() {
                             loadImage(skirt, buttonLastClic);
+
                         }
                     }.start();
 
