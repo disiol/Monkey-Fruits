@@ -13,7 +13,7 @@ import javax.inject.Inject;
 import static com.monkey.fruits.constants.Constants.MYLOG_TEG;
 
 public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
-    private static final int ForMatches = 12;
+    private static final int ForMatches = 10;
     private int lifes = 5;
     private int caynterMatches;
     private int namber;
@@ -34,7 +34,7 @@ public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
         if (!mathes) {
 
             if (lifes == 0) {
-                getView().showEndGame(mainActivityRouter, false);
+        //        getView().showEndGame(mainActivityRouter, false);
             } else {
                 lifes--;
                 getView().showMessage("Liefs left : " + lifes);
