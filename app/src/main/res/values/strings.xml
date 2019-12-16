@@ -2,4 +2,6 @@
     <string name="app_name">Monkey Fruits</string>
 
     <string name="you_win">You Win</string>
+    <string name="lives">lives: 5</string>
+    <string name="points">points: 10</string>
 </resources>
