@@ -16,8 +16,10 @@ import com.monkey.fruits.ui.fragments.endGame.presenter.endGamePresenter;
 public class EndGameFragment extends BaseBindingFragment<endGamePresenter, FragmentEndGameBinding> implements EndGameView {
 
     public static final String WIN = "win";
+    public static final String POINTS = "points";
 
     private boolean winGame;
+    private String points;
 
     @Override
     public int getLayoutResId() {
@@ -29,9 +31,12 @@ public class EndGameFragment extends BaseBindingFragment<endGamePresenter, Fragm
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        winGame= getArguments().getBoolean(WIN);
+        winGame = getArguments().getBoolean(WIN);
+        points = getArguments().getString(POINTS);
 
-        if(!winGame){
+        binding.poinintsTextView.setText(getText(R.string.points) + points);
+
+        if (!winGame) {
             binding.textView.setText("GAME OVER");
             binding.ConstraintLayout.setBackground(getActivity().getDrawable(R.drawable.background_lose));
         }
@@ -40,7 +45,7 @@ public class EndGameFragment extends BaseBindingFragment<endGamePresenter, Fragm
             presenter.newGame();
         });
         binding.buttonExit.setOnClickListener(v -> {
-           exitGame();
+            exitGame();
         });
 
 
