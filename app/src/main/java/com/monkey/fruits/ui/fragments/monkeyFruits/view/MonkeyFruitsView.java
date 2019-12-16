@@ -12,4 +12,6 @@ public interface MonkeyFruitsView extends BaseView {
     void setPoints(int points);
 
     void setLifesLeft(int lifes);
+
+    void showGameFragment(MainActivityRouter mainActivityRouter);
 }

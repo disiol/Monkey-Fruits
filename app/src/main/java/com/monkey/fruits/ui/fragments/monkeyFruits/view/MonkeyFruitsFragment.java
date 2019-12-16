@@ -47,6 +47,21 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
         setLifesLeft(lifes);
         setPoints(points);
 
+        forMatces(view);
+
+        binding.buttonExit.setOnClickListener(v -> {
+            getActivity().finish();
+        });
+
+
+        binding.buttonNewGame.setOnClickListener(v -> {
+            presenter.newGame();
+        });
+
+
+    }
+
+    private void forMatces(@NonNull View view) {
         ImageView button1 = getActivity().findViewById(R.id.button1);
         ImageView button2 = getActivity().findViewById(R.id.button2);
         ImageView button3 = getActivity().findViewById(R.id.button3);
@@ -195,8 +210,6 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
             doAfterClick(buttonNmberForMatch, button24, buttonPres, view, R.drawable.mantch_12);
 
         });
-
-
     }
 
     private void doAfterClick(int buttonNmberForMatch, ImageView buttonClick, ImageView[] safeButtonPres, View v, int drable) {
@@ -213,7 +226,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
     protected void cheakForNull(ImageView buttonClick) {
         if (buttonPres[0] == null) {
             buttonPres[0] = buttonClick;
-            Log.d(MYLOG_TEG, "cheakForNull =  " +   buttonPres[0]);
+            Log.d(MYLOG_TEG, "cheakForNull =  " + buttonPres[0]);
 
         }
     }
@@ -235,10 +248,8 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
             } else if (presenter.getNamber() != buttonNmberForMatch && presenter.getNamber() != 0) {
 
 
-
-
                 presenter.setNaber(0);
-               // loadImage(skirt, safeButtonPres);
+                // loadImage(skirt, safeButtonPres);
 
                 boolean equals = safeButtonPres.equals(buttonLastClic);
 
@@ -315,6 +326,11 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
     public void setLifesLeft(int lifes) {
         binding.livesTextView.setText(getText(R.string.lives) + String.valueOf(lifes));
 
+    }
+
+    @Override
+    public void showGameFragment(MainActivityRouter mainActivityRouter) {
+        mainActivityRouter.showLogoFragment();
     }
 
     public void loadImage(int part, ImageView button) {

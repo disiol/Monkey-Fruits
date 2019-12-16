@@ -72,4 +72,8 @@ public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
 
         Log.d(MYLOG_TEG, "setNaber " + namber);
     }
+
+    public void newGame() {
+        getView().showGameFragment(mainActivityRouter);
+    }
 }
