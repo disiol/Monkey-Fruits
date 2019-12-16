@@ -1,6 +1,7 @@
 package com.monkey.fruits.ui.fragments.monkeyFruits.view;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -295,9 +296,22 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
 
 
     @Override
-    public void showEndGame(MainActivityRouter mainActivityRouter, boolean flag) {
+    public void showEndGame(MainActivityRouter mainActivityRouter, boolean flag, int points) {
 
-        mainActivityRouter.showWinFragment(flag);
+        mainActivityRouter.showWinFragment(flag, points);
+    }
+
+    @SuppressLint("SetTextI18n")
+    @Override
+    public void setPoints(int points) {
+        binding.poinintsTextView.setText(getText(R.string.points) + String.valueOf(points));
+
+    }
+
+    @Override
+    public void setLifesLeft(int lifes) {
+        binding.livesTextView.setText(getText(R.string.lives) + String.valueOf(lifes));
+
     }
 
     public void loadImage(int part, ImageView button) {

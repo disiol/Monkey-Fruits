@@ -11,6 +11,7 @@ import com.monkey.fruits.R;
 
 import javax.inject.Inject;
 
+import static com.monkey.fruits.ui.fragments.endGame.view.EndGameFragment.POINTS;
 import static com.monkey.fruits.ui.fragments.endGame.view.EndGameFragment.WIN;
 
 public class MainActivityRouterImpl extends BaseRouter<MainActivity> implements MainActivityRouter {
@@ -23,16 +24,17 @@ public class MainActivityRouterImpl extends BaseRouter<MainActivity> implements 
 
     @Override
     public void showGameFragment() {
-        if(!isCurrentFragment(R.id.fragment_container, MonkeyFruitsFragment.class)) {
+        if (!isCurrentFragment(R.id.fragment_container, MonkeyFruitsFragment.class)) {
             replaceFragment(R.id.fragment_container, new MonkeyFruitsFragment());
         }
     }
 
     @Override
-    public void showWinFragment(boolean flag) {
-        if(!isCurrentFragment(R.id.fragment_container, EndGameFragment.class)) {
+    public void showWinFragment(boolean flag, int points) {
+        if (!isCurrentFragment(R.id.fragment_container, EndGameFragment.class)) {
             Bundle fragmentBundle = new Bundle();
-            fragmentBundle.putBoolean(WIN,  flag);
+            fragmentBundle.putBoolean(WIN, flag);
+            fragmentBundle.putString(POINTS, String.valueOf(points));
 
             EndGameFragment fragment = new EndGameFragment();
             fragment.setArguments(fragmentBundle);
@@ -42,7 +44,7 @@ public class MainActivityRouterImpl extends BaseRouter<MainActivity> implements 
 
     @Override
     public void showLogoFragment() {
-        if(!isCurrentFragment(R.id.fragment_container, StartFragment.class)) {
+        if (!isCurrentFragment(R.id.fragment_container, StartFragment.class)) {
             replaceFragment(R.id.fragment_container, new StartFragment());
         }
     }

@@ -17,6 +17,7 @@ public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
     private int lifes = 5;
     private int caynterMatches;
     private int namber;
+    private int points;
     private MainActivityRouter mainActivityRouter;
 
     @Inject
@@ -28,16 +29,25 @@ public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
 
         if (mathes) {
             caynterMatches++;
+            points++;
+            getView().setPoints(points);
             Log.d(MYLOG_TEG, "caynterMatches " + caynterMatches);
         }
 
         if (!mathes) {
 
+            if (points != 0) {
+                points--;
+            }
+            getView().setPoints(points);
+
+
             if (lifes == 0) {
-        //        getView().showEndGame(mainActivityRouter, false);
+                getView().showEndGame(mainActivityRouter, false, points);
             } else {
                 lifes--;
                 getView().showMessage("Liefs left : " + lifes);
+                getView().setLifesLeft(lifes);
 
             }
 
@@ -45,7 +55,7 @@ public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
         }
 
         if (caynterMatches == ForMatches) {
-            getView().showEndGame(mainActivityRouter, true);
+            getView().showEndGame(mainActivityRouter, true, points);
         }
     }
 

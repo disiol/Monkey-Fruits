@@ -7,5 +7,9 @@ import com.monkey.fruits.ui.base.BaseView;
 public interface MonkeyFruitsView extends BaseView {
 
 
-    void showEndGame(MainActivityRouter mainActivityRouter, boolean flag);
+    void showEndGame(MainActivityRouter mainActivityRouter, boolean flag, int points);
+
+    void setPoints(int points);
+
+    void setLifesLeft(int lifes);
 }

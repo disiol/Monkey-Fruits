@@ -5,5 +5,5 @@ public interface MainActivityRouter {
     void showLogoFragment();
     void showGameFragment();
 
-    void showWinFragment(boolean flag);
+    void showWinFragment(boolean flag, int points);
 }
