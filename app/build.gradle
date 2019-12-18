@@ -20,12 +20,12 @@ android {
         applicationId 'com.monkey.fruits'
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.1"
+        versionCode 2
+        versionName "1.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
-                onesignal_app_id               : '449686e3-2084-480e-a98a-f2b4139dc7ae',
+                onesignal_app_id               : 'd107db4d-927d-45a2-8e14-fc38a5430d21',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]

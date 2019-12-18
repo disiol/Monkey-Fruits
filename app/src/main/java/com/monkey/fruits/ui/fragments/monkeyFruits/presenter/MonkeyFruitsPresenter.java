@@ -46,7 +46,6 @@ public class MonkeyFruitsPresenter extends BasePresenter<MonkeyFruitsView> {
                 getView().showEndGame(mainActivityRouter, false, points);
             } else {
                 lifes--;
-                getView().showMessage("Liefs left : " + lifes);
                 getView().setLifesLeft(lifes);
 
             }

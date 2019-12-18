@@ -27,6 +27,7 @@ import static com.monkey.fruits.constants.Constants.MYLOG_TEG;
 public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresenter, FragmentMonkeyFruitsBinding> implements MonkeyFruitsView {
 
 
+    public static final int MILLIS_IN_FUTURE = 3000;
     private final ImageView[] buttonPres = new ImageView[1];
     private Animation animRotate = null;
     private int lifes = 5;
@@ -261,7 +262,7 @@ public class MonkeyFruitsFragment extends BaseBindingFragment<MonkeyFruitsPresen
                     this.buttonPres[0] = null;
 
 
-                    countDownTimerConfirmationImageView = new CountDownTimer(1500, 1) {
+                    countDownTimerConfirmationImageView = new CountDownTimer(MILLIS_IN_FUTURE, 1) {
                         @Override
                         public void onTick(long millisUntilFinished) {
                         }
