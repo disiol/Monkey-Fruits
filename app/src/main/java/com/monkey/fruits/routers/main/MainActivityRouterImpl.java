@@ -8,6 +8,7 @@ import com.monkey.fruits.ui.fragments.endGame.view.EndGameFragment;
 import com.monkey.fruits.ui.fragments.start.view.StartFragment;
 import com.monkey.fruits.ui.fragments.monkeyFruits.view.MonkeyFruitsFragment;
 import com.monkey.fruits.R;
+import com.monkey.fruits.ui.fragments.web.view.WebFragment;
 
 import javax.inject.Inject;
 
@@ -48,6 +49,11 @@ public class MainActivityRouterImpl extends BaseRouter<MainActivity> implements 
             replaceFragment(R.id.fragment_container, new StartFragment());
         }
     }
-
+    @Override
+    public void showWebFragment() {
+        if(!isCurrentFragment(R.id.fragment_container, WebFragment.class)) {
+            replaceFragment(R.id.fragment_container, new WebFragment());
+        }
+    }
 
 }
