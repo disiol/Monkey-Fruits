@@ -5,8 +5,9 @@ import com.monkey.fruits.di.scopes.FragmentScope;
 import com.monkey.fruits.routers.main.MainActivityRouter;
 import com.monkey.fruits.routers.main.MainActivityRouterImpl;
 import com.monkey.fruits.ui.fragments.endGame.view.EndGameFragment;
-import com.monkey.fruits.ui.fragments.logo.view.StartFragment;
 import com.monkey.fruits.ui.fragments.monkeyFruits.view.MonkeyFruitsFragment;
+import com.monkey.fruits.ui.fragments.start.view.StartFragment;
+import com.monkey.fruits.ui.fragments.web.view.WebFragment;
 
 import dagger.Binds;
 import dagger.Module;
@@ -18,7 +19,9 @@ public interface MainActivityModule {
     @Binds
     MainActivityRouter mainActivityRouter(MainActivityRouterImpl mainRouter);
 
-
+    @FragmentScope
+    @ContributesAndroidInjector
+    WebFragment webFragment();
 
     @FragmentScope
     @ContributesAndroidInjector

@@ -1,4 +1,4 @@
-package com.monkey.fruits.ui.fragments.logo.view;
+package com.monkey.fruits.ui.fragments.start.view;
 
 
 import android.os.Bundle;
@@ -11,10 +11,10 @@ import androidx.annotation.Nullable;
 import com.monkey.fruits.databinding.StartBinding;
 import com.monkey.fruits.routers.main.MainActivityRouter;
 import com.monkey.fruits.ui.base.BaseBindingFragment;
-import com.monkey.fruits.ui.fragments.logo.presenter.LogoPresenter;
+import com.monkey.fruits.ui.fragments.start.presenter.StartPresenter;
 import com.monkey.fruits.R;
 
-public class StartFragment extends BaseBindingFragment<LogoPresenter, StartBinding> implements CheckView {
+public class StartFragment extends BaseBindingFragment<StartPresenter, StartBinding> implements CheckView {
 
 
     private CountDownTimer countDownTimer;

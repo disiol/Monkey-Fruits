@@ -1,4 +1,4 @@
-package com.monkey.fruits.ui.fragments.logo.view;
+package com.monkey.fruits.ui.fragments.start.view;
 
 
 import com.monkey.fruits.routers.main.MainActivityRouter;
